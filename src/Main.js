@@ -1,13 +1,25 @@
 import {Component} from 'react'
 import Hornedbeasts from './Hornedbeasts'
+import Horneddata from './data.js'
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      Horneddata ,noOfClicks:0}
+  }
+
+  handleClick =() =>{
+    this.setState({noOfClicks : this.state.noOfClicks+1});
+    console.log ('was clicked');
+  }
   render(){
     return(
       <>
       <h3>Horned Beast</h3>
-      <Hornedbeasts title={'UNIWHAL'} imgurl={'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg'} name={'unicorn'} description={'A unicorn and a narwhal nuzzling their horns'}/>
-      <Hornedbeasts title={'Rhino Family'} imgurl={'https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80'}name={'unicorn'} description={'Parent rhino with two babies'}/>
+      <Hornedbeasts title={this.state.Horneddata.map(name=>{return name.title})} imgurl={this.state.Horneddata.map(img=>{return<img src={img.image_url} width={250} height = {250} onClick = {this.handleClick}/>})}  description={this.state.Horneddata.map(des=>{return des.description})}
+      click={this.state.noOfClicks}/>
+      
       </>
     )
   }
