@@ -1,7 +1,7 @@
 import React ,{Component} from 'react'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import SelectedBeast from './selectedbeasts.js';
+import App from './selectedbeasts.js';
 
 class Hornedbeasts extends Component{
   constructor(props){
@@ -17,15 +17,9 @@ class Hornedbeasts extends Component{
     }
 
     handleClickSize = () =>{
-      this.setState({show:true});
+      this.props.updateBeast(this.props.beast);
       console.log ('was clicked')
     }
-
-
-    hideModal =() =>{
-      this.setState({show:false});
-    }
-
 
 
   render(){
@@ -43,8 +37,8 @@ class Hornedbeasts extends Component{
   </Card.Body>
 </Card>
      
-      <SelectedBeast show={this.state.show} handleClickSize={this.handleClickSize} hideModal={this.hideModal}
-      beastselect = {this.props.beast.title} beastimg={this.props.beast.image_url} beastdes={this.props.beast.description}/>
+      {/* <SelectedBeast show={this.state.show} handleClickSize={this.handleClickSize} hideModal={this.hideModal}
+      beastselect = {this.props.beast.title} beastimg={this.props.beast.image_url} beastdes={this.props.beast.description}/> */}
       
       
       

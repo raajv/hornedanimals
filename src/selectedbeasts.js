@@ -20,11 +20,11 @@ render(){
     <Modal show={this.props.show} onHide={this.handleClose} animation={false}size="lg"
         >
       <Modal.Header closeButton>
-        <Modal.Title>{this.props.beastselect}</Modal.Title>
+        <Modal.Title>{this.props.featuredBeast.title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body><img src={this.props.beastimg}className="img-fluid"/></Modal.Body>
+      <Modal.Body><img src={this.props.featuredBeast.image_url}className="img-fluid"/></Modal.Body>
       <Modal.Footer>
-        {this.props.beastdes}
+        {this.props.featuredBeast.description}
       </Modal.Footer>
     </Modal>
   </>
