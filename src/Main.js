@@ -12,20 +12,21 @@ class Main extends Component {
 
 render(){
     return(
-      <>
+      <div >
     
       <h3>Horned Beast</h3>
-      <Container>
-        <Row sm={3}>
+      <Container fluid className="text-center">
+        <Row sm={3}className="justify-content-md-center">
           {Horneddata.map(beast => 
           <Hornedbeasts beast={beast}/>
           )}
         </Row>
-      </Container>
+      
       {Horneddata.map(beast => 
           <SelectedBeast beast={beast}/>
       )}
-      </>
+      </Container >
+      </div>
     )
   }
 }
