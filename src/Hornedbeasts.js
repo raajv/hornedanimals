@@ -43,7 +43,8 @@ class Hornedbeasts extends Component{
   </Card.Body>
 </Card>
      
-      <SelectedBeast show={this.state.show} />
+      <SelectedBeast show={this.state.show} handleClickSize={this.handleClickSize} hideModal={this.hideModal}
+      beastselect = {this.props.beast.title} beastimg={this.props.beast.image_url} beastdes={this.props.beast.description}/>
       
       
       
