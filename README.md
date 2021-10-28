@@ -2,6 +2,24 @@
 
 this is about horned beasts our first code 301 project enjoy !
 
+# LAB 02 
+
+Number and name of feature: feature 1 2 3 added for lab 02 and deployed on netlify
+
+Estimate of time needed to complete: estimated about 1hr 30
+
+Start time: 1500
+
+Finish time: 1730
+
+Actual time needed to complete: took about 2 hr 30
+
+AH HA moment was once i realised how to access the object then things flowed pretty smooth
+
+# LAB 03
+
+
+
 
 
 
