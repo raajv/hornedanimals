@@ -12,33 +12,25 @@ import Button from 'react-bootstrap/Button'
 
 class Header extends Component{
  
+  handleEvent=(e)=>{
+   let selection =e.target.value;
+   this.props.beastData(selection);
+  };
+  
   render(){
     return(
       <Navbar bg="dark" variant="dark"fixed="top">
     <Container>
       <Form>
-      <Form.Select onChange={this.props.beastData} aria-label="Default select example">
-            <option>Select a number filter</option>
+      <Form.Select onChange={this.handleEvent} aria-label="Default select example">
+            <option>Select number of horns</option>
             <option value="1">one</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="more than 3">more than 3</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+            <option value="morethan3">more than three</option>
      </Form.Select>
     </Form>
-    <ListGroup>
-          <ListGroup.Item>
-          <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={this.props.newBeast.image_url } alt={this.props.newBeast.title} />
-  <Card.Body>
-    <Card.Title>{this.props.newBeast.title}</Card.Title>
-    <Card.Text>
-    {this.props.newBeast.description}
-    </Card.Text>
     
-  </Card.Body>
-</Card>
-          </ListGroup.Item>
-        </ListGroup>
     <Navbar.Brand href="#home">Horned Beasts</Navbar.Brand>
     </Container>
   </Navbar>

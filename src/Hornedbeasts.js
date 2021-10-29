@@ -7,7 +7,7 @@ class Hornedbeasts extends Component{
   constructor(props){
     super(props);
       this.state= {noOfClicks : 0,
-                    show:false
+                    
                   }
     }
     
