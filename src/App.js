@@ -7,8 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SelectedBeast from './selectedbeasts.js';
 
 
-
-
 export default class App extends Component {
   
   constructor(props){
@@ -17,51 +15,40 @@ export default class App extends Component {
       featuredBeast :{},
       allHorns : Horneddata,
     }}
-    hideModal =() =>{
+    
+  hideModal =() =>{
       this.setState({show:false});
     }
-    showModal = () =>{
+  showModal = () =>{
       this.setState({show:true});
     }
-    updateBeast =(beast)=>{
+  updateBeast =(beast)=>{
       this.setState({
         featuredBeast : beast
       })
         this.showModal();
       }
 
-      
+  handleHorn =(selection) =>{
+    let updatedHornArray
         
-      handleHorn =(selection) =>{
-        let updatedHornArray
-        
-      if (selection === "1"){
+    if (selection === "1"){
           updatedHornArray = Horneddata.filter(i=>i.horns===1);
           this.setState ({allHorns : updatedHornArray})
-           }
-          
-          else if (selection === "2"){
+    }else if (selection === "2"){
             updatedHornArray = Horneddata.filter(i=>i.horns===2);
             this.setState ({allHorns : updatedHornArray})
-
-         }
-          else if (selection === "3"){
+    }else if (selection === "3"){
               updatedHornArray = Horneddata.filter(i=>i.horns===3);
               this.setState ({allHorns : updatedHornArray})
-          
-              }
-          else if (selection === "morethan3"){
+    }else if (selection === "morethan3"){
                 updatedHornArray = Horneddata.filter(i=>i);
                 this.setState ({allHorns : updatedHornArray})
-                
-          }
-          
-        };
+    }
+  };
        
-        render() {
+  render() {
     return (
-      
-      
       <div  style={{
         backgroundColor: '#1E90FF'}}>
         <Header beastData ={this.handleHorn}  />

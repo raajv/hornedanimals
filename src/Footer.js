@@ -5,13 +5,11 @@ class Footer extends Component{
   render(){
     return(
       <>
-      <Navbar bg="dark" variant="dark" >
-    <Container>
-    <Navbar.Brand href="#home">AUTHOR: Raajvardhan Chaukulkar</Navbar.Brand>
-    
-    </Container>
-  </Navbar>
-      
+        <Navbar bg="dark" variant="dark" >
+        <Container>
+        <Navbar.Brand href="#home">AUTHOR: Raajvardhan Chaukulkar</Navbar.Brand>
+        </Container>
+        </Navbar>
       </>
     )
   }

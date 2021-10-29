@@ -20,22 +20,20 @@ class Header extends Component{
   render(){
     return(
       <Navbar bg="dark" variant="dark"fixed="top">
-    <Container>
-      <Form>
-      <Form.Select onChange={this.handleEvent} aria-label="Default select example">
-            <option>Select number of horns</option>
-            <option value="1">one</option>
-            <option value="2">two</option>
-            <option value="3">three</option>
-            <option value="morethan3">more than three</option>
-     </Form.Select>
-    </Form>
-    
-    <Navbar.Brand href="#home">Horned Beasts</Navbar.Brand>
-    </Container>
-  </Navbar>
-      
-    )
+        <Container>
+          <Form>
+             <Form.Select onChange={this.handleEvent} aria-label="Default select example">
+              <option>Select number of horns</option>
+              <option value="1">one</option>
+              <option value="2">two</option>
+              <option value="3">three</option>
+              <option value="morethan3">more than three</option>
+              </Form.Select>
+           </Form>
+       <Navbar.Brand href="#home">Horned Beasts</Navbar.Brand>
+      </Container>
+       </Navbar>
+     )
   }
 }
 export default Header;
