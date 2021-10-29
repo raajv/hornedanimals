@@ -2,13 +2,6 @@ import { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form'
-import BeastData from './data.json'
-import ListGroup from 'react-bootstrap/ListGroup'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-
-
-
 
 class Header extends Component{
  
