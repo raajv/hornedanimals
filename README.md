@@ -30,7 +30,18 @@ Actual time needed to complete: 45 min
 
 added functionality to click on the image and then it blows up using modals
 
+# lAB 04
 
+Number and name of feature: features completed for lab 04
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 1300
+
+Finish time: 1400
+
+Actual time needed to complete: 2 hours
+added search functionality depending on horns
 
 
 
